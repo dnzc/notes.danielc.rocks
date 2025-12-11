@@ -307,7 +307,7 @@
     }
 
     .article h2 {
-        @apply text-2xl font-bold pt-6 pb-2 text-articleh2;
+        @apply text-2xl font-bold pt-8 pb-2 text-articleh2;
     }
 
     .article em {

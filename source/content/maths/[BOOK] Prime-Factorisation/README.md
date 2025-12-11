@@ -5,7 +5,7 @@ tags:
   - "number-theory pink"
 ---
 
-# Proving the Fundamental Theorem of Arithmetic
+# Prime Factorisation & the Fundamental Theorem of Arithmetic
 
 A rigorous journey from the ground up in which we use axioms to build a proof that every positive integer can be uniquely prime factored.
 

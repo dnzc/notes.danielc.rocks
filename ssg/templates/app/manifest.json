@@ -1,6 +1,6 @@
 {
-  "name": "Theorem Town",
-  "short_name": "Town",
+  "name": "Notes | Daniel C",
+  "short_name": "Notes",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ab6bf9",
-  "background_color": "#ab6bf9",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone"
 }

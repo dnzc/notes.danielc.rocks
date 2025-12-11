@@ -1,19 +1,15 @@
 # theorem-town
 
-This repository contains the source content for [theoremtown.com](https://theoremtown.com), which contains mathematical insights and my Tripos course notes. The static-site generator and website design are completely custom and coded by myself from scratch.
-
-### Architecture
-
-- Python-based static site generator (SSG) in `ssg/` converts Markdown content into Next.js pages
-- Markdown content stored in `source/`
-- Standalone Next.js app in `next-app/`, containing the generated content pages
+This is the source code for [theoremtown.com](https://theoremtown.com), which contains my notes on mathematical topics. It includes a custom static-site generator built from scratch because I'm extra like that. The website design is original.
 
 ### How the SSG works
 
-1. Reads Markdown files
+1. Reads Markdown files from source/
 2. Processes them with a custom [mistune](https://github.com/lepture/mistune) processor, that handles custom markdown features like math tags
 3. Injects the result into custom jinja templates
 4. Wraps in boilerplate React to generate Next.js pages, and writes to the standalone Next.js app
+
+- Also uses react-svg to custom compile svgs into inline react components so they can be given variable colours
 
 ### Running locally
 
@@ -21,17 +17,12 @@ This repository contains the source content for [theoremtown.com](https://theore
 cd ssg
 pip install -r requirements.txt
 python3 run.py
-
-# Start development server for either site
 cd next-app && npm run dev
 ```
-
 
 ### Vercel Deployment
 
 A Vercel project listens to this repository and has `next-app/` as the project root. The SSG runs automatically during deployment, via the configuration in `next-app/vercel.json`. `next-app/app` is not tracked in git - instead it is built fresh on each deployment.
-
-## Content Authoring Information
 
 ### Markdown Custom Features
 
@@ -139,3 +130,5 @@ This project uses dual licensing:
 
 - **Code**: All source code (Next.js app, Python SSG, components, etc.) is licensed under the [MIT License](LICENSE)
 - **Content**: The educational content in `/source/` and all generated derived content displayed on the website is licensed under [CC BY 4.0](LICENSE-CONTENT)
+
+The opengraph image is adapted from [Artist's blossom]("https://inkscape.org/~Inkonic/%E2%98%85inkscapes-path-artists-blossom") by Inkonic, licensed under [CC BY-SA 4.0]("https://creativecommons.org/licenses/by-sa/4.0/").

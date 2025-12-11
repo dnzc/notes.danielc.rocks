@@ -423,8 +423,9 @@ def process_markdown(content, add_heading_ids=True):
 
 
 def nextjs_replacements(html):
-    component_names = [comp[0] for comp in COMPONENTS]
-    
+    component_names = [comp[0] for comp in COMPONENTS if comp[1]] # only the block components, e.g. not DiscreetLink
+    component_names += ['CopyButton'] # copy button is special (":::copiable" functionality)
+
     for tag in component_names + ['div']:
         # find <p> tags that wrap this tag and remove them (don't ask me what the hell this regex does, claude did it)
         html = re.sub(rf'<p>([^<]*(?:<(?!/?p\b)[^<]*)*<{tag}[^>]*?>.*?</{tag}>[^<]*(?:<(?!/?p\b)[^<]*)*)</p>', r'\1', html, flags=re.DOTALL)

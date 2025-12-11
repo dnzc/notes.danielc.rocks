@@ -96,27 +96,23 @@ Additive inverses are unique.
 <Proof>
 Let $a$ be an arbitrary integer. Let $b,c$ be two additive inverses of a. We will show that $b = c$.
 
-Consider $(a+b)+c$.
+Consider $(b+a)+c$.
 
 One one hand:
 
-$(a+b)+c = 0+c$ by **+ive inv.**
+$(b+a)+c = 0+c$ by **+ive inv.**
 
 $= c$ by **+ive id.**
 
 On the other hand:
 
-$(a+b)+c = a+(b+c)$ by **assoc.**
+$(b+a)+c = b+(a+c)$ by **assoc.**
 
-$=a+(c+b)$ by **comm.**
-
-$=(a+c)+b$ by **assoc.**
-
-$ = 0+b$ by **+ive inv.**
+$ = b+0$ by **+ive inv.**
 
 $= b$ by **+ive id.**
 
-Thus, $b = (a+b)+c = c$, so $b=c$, as required.
+Thus, $b = (b+a)+c = c$, so $b=c$, as required.
 </Proof>
 </Thm>
 
@@ -290,7 +286,7 @@ $a \gt 0 \iff a \in \mathbb{N}$
 $1 \in \mathbb{N}$  
 <Proof> Use Trichotomy and eliminate the other two cases by contradiction.  
 
-If $1=0$, then since **$\mathbb{N}$ is nonempty**, pick a natural $x$, then we have $x = 1\cdot x = 0 \cdot x = 0$ (by ***ive id**. and **Lemma 5**) So $0$ is natural, which contradicts Trichotomy.  
+If $1=0$, then since **$\mathbb{N}$ is nonempty**, pick a natural $x$, then we have $x = 1\cdot x = 0 \cdot x = 0$ (by **\*ive id**. and **Lemma 5**) So $0$ is natural, which contradicts Trichotomy.  
 
 If $-1$ is natural, then so is $(-1)\cdot(-1)$ by **closure**, but $(-1)\cdot (-1) = -(-1) = 1$ by **Lemma 7** and **Lemma 1**. So -1 and 1 are both natural, contradicting Trichotomy.
 </Proof>
