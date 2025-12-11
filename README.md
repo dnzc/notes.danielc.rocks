@@ -60,11 +60,12 @@ A Vercel project listens to this repository and has `next-app/` as the project r
 
 ## Changelog
 
-### 10/09/25
+### 11/12/25
 
 #### Changed
 
-- New domain https://theoremtown.com
+- Smaller line length for readability
+- Homepage revamp
 
 ### 22/08/25
 
