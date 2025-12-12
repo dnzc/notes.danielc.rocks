@@ -45,7 +45,7 @@ export default function Comments({ isReadme = false }) {
         <Giscus
           key={theme} // Force re-render when theme changes
           id="comments"
-          repo="dnzc/theorem-town"
+          repo="dnzc/notes.danielc.rocks"
           repoId="R_kgDOJ1IJ5A"
           category="General"
           categoryId="DIC_kwDOJ1IJ5M4CvRJn"
