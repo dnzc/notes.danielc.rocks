@@ -40,11 +40,11 @@ In the second section of the course, we generalise even more, to study "topologi
   <div class='flex-[1_1_200px] min-w-[200px] space-y-4'>
     <p>For example, let's say I have a piece of paper lying flat on a table. There is a notion of distance - indeed, it's the everyday straight-line-distance we're familiar with.</p>
     <p>But say I pick the paper up and it bends. The points that were close before are still close; conversely, if two points are close on the bent paper, then they were close before. So bending the paper didn't change our idea of which points are close together.</p>
-    <p>We're not really giving the bent paper a notion of distance - instead, we're saying "these two points were close before and the thing I did to the paper didn't change that".[^1]</p>
+    <p>We're not really giving the bent paper a notion of distance - instead, we're saying "these two points were close before and the thing I did to the paper didn't change that".[^2]</p>
   </div>
 </div>
 
-[^1]: However, there is a perfectly good and natural way to define a distance function on the bent paper: we define the distance between the two points on the bent paper to be the distance between them before the paper was scrunched up. See "metrizability is topologically invariant" in section B, chapter 3.2.
+[^2]: However, there is a perfectly good and natural way to define a distance function on the bent paper: we define the distance between the two points on the bent paper to be the distance between them before the paper was scrunched up. See "metrizability is topologically invariant" in section B, chapter 3.2.
 
 The same thing is true if I scrunch up the paper! The points that are "close together" in the scrunched up paper are precisely those that are close together in the original flat piece. This special kind of transformation is called a "homeomorphism" - meaning that it does not change the idea of which points are close.
 
