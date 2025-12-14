@@ -1,7 +1,6 @@
 ---
 tags:
   - "pure-maths indigo"
-  - "TODO red"
 created: 16/12/2024 22:00
 ---
 # Analysis and Topology
@@ -45,7 +44,7 @@ In the second section of the course, we generalise even more, to study "topologi
   </div>
 </div>
 
-[^1]: However, there is a perfectly good and natural way to define a distance function on the bent paper: we define the distance between the two points on the bent paper to be the distance between them before the paper was scrunched up. See TODO: homeomorphisms preserve metrizability.
+[^1]: However, there is a perfectly good and natural way to define a distance function on the bent paper: we define the distance between the two points on the bent paper to be the distance between them before the paper was scrunched up. See "metrizability is topologically invariant" in section B, chapter 3.2.
 
 The same thing is true if I scrunch up the paper! The points that are "close together" in the scrunched up paper are precisely those that are close together in the original flat piece. This special kind of transformation is called a "homeomorphism" - meaning that it does not change the idea of which points are close.
 
@@ -59,7 +58,7 @@ We will define and study concepts like continuity, homeomorphisms, open sets etc
 
 <div class="py-4"><hr/></div>
 
-Finally, we will look at the special metric space $\mathbb{R}^n$ (n-dimensional space), where we will study differentiation. One of the things that makes $\mathbb{R}^n$ special is that it's a special type of metric space, called a "normed space", where not only is there a metric (distance function), but also a way of measuring *lengths* (how big points are). We won't study these in this course, but see TODO:link Part II Linear Analysis where they are studied in-depth.
+Finally, we will look at the special metric space $\mathbb{R}^n$ (n-dimensional space), where we will study differentiation. One of the things that makes $\mathbb{R}^n$ special is that it's a special type of metric space, called a "normed space", where not only is there a metric (distance function), but also a way of measuring *lengths* (how big points are). We won't study these in this course, but see Part II Linear Analysis where they are studied in-depth.
 
 <div class="flex justify-center pb-8 pt-4">
   <AUTOSVG src="analysis-and-topology/intro/spacesvenn.svg" width="400" height="300"/>

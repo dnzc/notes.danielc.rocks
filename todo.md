@@ -2,7 +2,9 @@
 
 # Unfinished
 
-- write proper motivating description for A&T course, fill out content
+- fill out A&T content
+- in A&T intro, add link to Part II Linear Analysis at the bottom
+- in A&T intro, add link to: "metrizability is topologically invariant" in section B, chapter 3.2.
 
 # Functionality to Add
 
