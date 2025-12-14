@@ -114,6 +114,7 @@ def checksum(path):
             return hash(f.read())
     concat = []
     for child in os.listdir(path):
+        if child.startswith('.'): continue # ignore hidden files
         concat.append(checksum(path+'/'+child)) # detect changes in children
     concat.append(hash(path.removeprefix(ROOT_DIR))) # detect new folders
     return hash(''.join(concat))
@@ -669,17 +670,18 @@ def gen_react_svgs(cur_dir, depth, checksum_tree):
         return
 
     # directory
-    ensure_dir_with_correct_case(AUTOSVG_TARGET_DIR+cur_dir)
-    for child in sorted(os.listdir(cur_path)):
-        child_dir = cur_dir+'/'+child
+    elif os.path.isdir(cur_path):
+        ensure_dir_with_correct_case(AUTOSVG_TARGET_DIR+cur_dir)
+        for child in sorted(os.listdir(cur_path)):
+            child_dir = cur_dir+'/'+child
 
-        child_checksum_tree = {}
-        if bool(checksum_tree): # an old tree entry exists
-            child_checksum_tree = [i for i in checksum_tree['children'] if i['path'].endswith(child_dir)]
-            assert len(child_checksum_tree) <= 1
-            if len(child_checksum_tree): child_checksum_tree = child_checksum_tree[0]
+            child_checksum_tree = {}
+            if bool(checksum_tree): # an old tree entry exists
+                child_checksum_tree = [i for i in checksum_tree['children'] if i['path'].endswith(child_dir)]
+                assert len(child_checksum_tree) <= 1
+                if len(child_checksum_tree): child_checksum_tree = child_checksum_tree[0]
 
-        gen_react_svgs(child_dir, depth+1, child_checksum_tree)
+            gen_react_svgs(child_dir, depth+1, child_checksum_tree)
 
 def inject_autosvg_tags(page):
     """replace AUTOSVG tags with react components, and add imports"""
@@ -705,7 +707,7 @@ def gen_checksum_tree(path):
     d['path'] = path.removeprefix(ROOT_DIR)
     d['checksum'] = checksum(path)
     if os.path.isdir(path):
-        d['children'] = [gen_checksum_tree(path+'/'+child) for child in os.listdir(path)]
+        d['children'] = [gen_checksum_tree(path+'/'+child) for child in os.listdir(path) if not child.startswith('.')]
     return d
 
 def handle_warnings():
