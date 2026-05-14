@@ -1,21 +1,5 @@
 {
-  "builds": [
-    {
-      "src": "ssg/run.py",
-      "use": "@vercel/python"
-    },
-    {
-      "src": "next-app/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "next-app/$1"
-    }
-  ],
-  "buildCommand": "cd ssg && pip3 install --user -r requirements.txt --break-system-packages && python3 run.py && cd ../next-app && npm run build",
+  "buildCommand": "cd ../ssg && python3 -m pip install -r requirements.txt --break-system-packages && python3 run.py && cd ../next-app && npm run build",
   "ignoreCommand": "git diff HEAD^ HEAD --quiet -- ../ssg ../source ./",
   "git": {
     "deploymentEnabled": {
