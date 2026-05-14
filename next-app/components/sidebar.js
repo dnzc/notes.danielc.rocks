@@ -7,8 +7,8 @@ import Popup from '@/components/popup'
 import { BsLayoutTextSidebarReverse } from 'react-icons/bs'
 import { FiCommand } from "react-icons/fi";
 import { PiControlBold } from "react-icons/pi";
-import { IoIosSettings } from "react-icons/io";
 import ThemeSwitch from '@/components/themeSwitch'
+import { GrPaint } from 'react-icons/gr'
 
 export default function Sidebar({ children }) {
 
@@ -176,7 +176,7 @@ export default function Sidebar({ children }) {
                             /* mobile top bar or open sidebar */
                             /* TODO - make bigger on mobile */
                             <div className={`flex-none w-[2rem] h-[2.25rem] md:fixed md:w-[2rem] md:h-[2.25rem] ${active ? 'md:left-[calc(270px-2rem-1rem)]' : 'md:left-[calc(270px-3rem)] md:hidden'} bg-button rounded-md hover:bg-button-hover flex items-center justify-center transition-all duration-150 ease-in-out`}>
-                                <IoIosSettings className='shrink-0' size={25}/>
+                                <GrPaint className='shrink-0' size={20}/>
                             </div>
                         }
                         listenWhenLarge={true}

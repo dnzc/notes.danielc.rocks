@@ -2,6 +2,7 @@
 tags:
   - "pure-maths indigo"
 created: 16/12/2024 22:00
+updated: 14/12/2024 20:00
 ---
 # Analysis and Topology
 

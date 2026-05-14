@@ -45,6 +45,7 @@ def wrap_in_js(jinja, title=''):
 
     all_imports = {
         'FaBook': 'import { FaBook } from "react-icons/fa"',
+        'GrPaint': 'import { GrPaint } from "react-icons/gr"',
         'GrArticle': 'import { GrArticle } from "react-icons/gr"',
         'AiFillFolder': 'import { AiFillFolder } from "react-icons/ai"',
         'Link': 'import Link from "next/link"',
