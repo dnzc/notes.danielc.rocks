@@ -1,5 +1,7 @@
 # notes.danielc.rocks
 
+2026/06/16 UPDATE: this repo is now archived, and the website has been taken down; migrated to [danielc.rocks](https://danielc.rocks).
+
 This is the source code for [notes.danielc.rocks](https://notes.danielc.rocks), which contains my notes on mathematical topics. It includes a custom static-site generator built from scratch because I'm extra like that. The website design is original.
 
 ### How the SSG works
